@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7B3C3C8A-29C1-4B57-9E66-1940D53D00AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RelayTest.DAL</RootNamespace>
+    <AssemblyName>RelayTest.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\Application\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DalCommon.cs" />
+    <Compile Include="DalCOM_SETTINGS.cs" />
+    <Compile Include="DalDEV_COILPOWER_INFO.cs" />
+    <Compile Include="DalDEV_COILPOWER_TO_LOAD.cs" />
+    <Compile Include="DalDEV_LOADPOWER_INFO.cs" />
+    <Compile Include="DalDEV_LOADPOW_TO_SWITCH.cs" />
+    <Compile Include="DalDEV_LOAD_CHANNEL_INFO.cs" />
+    <Compile Include="DalDEV_LOAD_INFO.cs" />
+    <Compile Include="DalDEV_LOAD_TO_SUB.cs" />
+    <Compile Include="DalDEV_POWER_INFO.cs" />
+    <Compile Include="DalDEV_POWER_SWITCH.cs" />
+    <Compile Include="DalDEV_POWER_TO_LOAD.cs" />
+    <Compile Include="DalDEV_SENSOR_INFO.cs" />
+    <Compile Include="DalDEV_SUBORDINATE_INFO.cs" />
+    <Compile Include="DalDEV_SWITCH_INOUT.cs" />
+    <Compile Include="DalDEV_SWITCH_TO_LOAD.cs" />
+    <Compile Include="DalDEV_TESTBOX_INFO.cs" />
+    <Compile Include="DalDEV_WORKSTATION_INFO.cs" />
+    <Compile Include="DalDEV_UPGRADERECORD.cs" />
+    <Compile Include="DalDEV_WORK_TO_COILPOWER.cs" />
+    <Compile Include="DalDEV_WORK_TO_POWER.cs" />
+    <Compile Include="DalDEV_WORK_TO_SENSOR.cs" />
+    <Compile Include="DalDEV_WORK_TO_SUB.cs" />
+    <Compile Include="DalFLOW_COIL_STATUS.cs" />
+    <Compile Include="DalFLOW_DEVICE_STATUS.cs" />
+    <Compile Include="DalFLOW_LOAD_CANNEL.cs" />
+    <Compile Include="DalFLOW_POWER_SWITCH.cs" />
+    <Compile Include="DalFLOW_SENSOR_DATA.cs" />
+    <Compile Include="DalLIMS_CONTACT_TYPE.cs" />
+    <Compile Include="DalLIMS_DOWNLOAD_PARA.cs" />
+    <Compile Include="DalLIMS_DOWNLOAD_SAM.cs" />
+    <Compile Include="DalOPERATIONLOG.cs" />
+    <Compile Include="DalPAR_COMMAND_INFO.cs" />
+    <Compile Include="DalPAR_COMMAND_READT.cs" />
+    <Compile Include="DalPAR_COMMAND_RECEIVE.cs" />
+    <Compile Include="DalPAR_COMMAND_SEND.cs" />
+    <Compile Include="DalPAR_COMMAND_SENDP.cs" />
+    <Compile Include="DalPAR_COMMAND_WORKTYPE.cs" />
+    <Compile Include="DalSYSTEM_LIST.cs" />
+    <Compile Include="DalSYSTEM_MODULE.cs" />
+    <Compile Include="DalSYSTEM_ROLE.cs" />
+    <Compile Include="DalSYSTEM_ROLE_AUTH.cs" />
+    <Compile Include="DalSYSTEM_USER.cs" />
+    <Compile Include="DalSYSTEM_USER_ROLE.cs" />
+    <Compile Include="DalTESTTASK_PARTYPE.cs" />
+    <Compile Include="DalTESTTASK_PARVALUE.cs" />
+    <Compile Include="DalTEST_ALLOCATION.cs" />
+    <Compile Include="DalTEST_INFO.cs" />
+    <Compile Include="DalTEST_INFODB.cs" />
+    <Compile Include="DalTEST_PAR_VALUE_KHD.cs" />
+    <Compile Include="DalTEST_PAR_VALUE_SWJ.cs" />
+    <Compile Include="DalTEST_PREPARE.cs" />
+    <Compile Include="DalTEST_PREPARE_ATTATCH.cs" />
+    <Compile Include="DalTEST_READT_VALUE.cs" />
+    <Compile Include="DalTEST_SAMPLE_FAILURE.cs" />
+    <Compile Include="DalTEST_SAMPLE_INFO.cs" />
+    <Compile Include="DalTEST_SENDP_VALUE.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{F3712814-CAE7-490F-A8A0-8850761189CF}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{BE6F087C-7381-47BA-9300-DE2E2F9B38EA}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

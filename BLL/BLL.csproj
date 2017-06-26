@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F01FFB0-F15B-491C-83BD-C2D7246EBAD3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RelayTest.BLL</RootNamespace>
+    <AssemblyName>RelayTest.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\Application\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BllCommon.cs" />
+    <Compile Include="BllCOM_SETTINGS.cs" />
+    <Compile Include="BllDEV_COILPOWER_INFO.cs" />
+    <Compile Include="BllDEV_COILPOWER_TO_LOAD.cs" />
+    <Compile Include="BllDEV_LOADPOWER_INFO.cs" />
+    <Compile Include="BllDEV_LOADPOW_TO_SWITCH.cs" />
+    <Compile Include="BllDEV_LOAD_CHANNEL_INFO.cs" />
+    <Compile Include="BllDEV_LOAD_INFO.cs" />
+    <Compile Include="BllDEV_LOAD_TO_SUB.cs" />
+    <Compile Include="BllDEV_POWER_INFO.cs" />
+    <Compile Include="BllDEV_POWER_SWITCH.cs" />
+    <Compile Include="BllDEV_POWER_TO_LOAD.cs" />
+    <Compile Include="BllDEV_SENSOR_INFO.cs" />
+    <Compile Include="BllDEV_SUBORDINATE_INFO.cs" />
+    <Compile Include="BllDEV_SWITCH_INOUT.cs" />
+    <Compile Include="BllDEV_SWITCH_TO_LOAD.cs" />
+    <Compile Include="BllDEV_TESTBOX_INFO.cs" />
+    <Compile Include="BllDEV_WORKSTATION_INFO.cs" />
+    <Compile Include="BllDEV_UPGRADERECORD.cs" />
+    <Compile Include="BllDEV_WORK_TO_COILPOWER.cs" />
+    <Compile Include="BllDEV_WORK_TO_POWER.cs" />
+    <Compile Include="BllDEV_WORK_TO_SENSOR.cs" />
+    <Compile Include="BllDEV_WORK_TO_SUB.cs" />
+    <Compile Include="BllFLOW_COIL_STATUS.cs" />
+    <Compile Include="BllFLOW_DEVICE_STATUS.cs" />
+    <Compile Include="BllFLOW_LOAD_CANNEL.cs" />
+    <Compile Include="BllFLOW_POWER_SWITCH.cs" />
+    <Compile Include="BllFLOW_SENSOR_DATA.cs" />
+    <Compile Include="BllLIMS_CONTACT_TYPE.cs" />
+    <Compile Include="BllLIMS_DOWNLOAD_PARA.cs" />
+    <Compile Include="BllLIMS_DOWNLOAD_SAM.cs" />
+    <Compile Include="BllOPERATIONLOG.cs" />
+    <Compile Include="BllPAR_COMMAND_INFO.cs" />
+    <Compile Include="BllPAR_COMMAND_READT.cs" />
+    <Compile Include="BllPAR_COMMAND_RECEIVE.cs" />
+    <Compile Include="BllPAR_COMMAND_SEND.cs" />
+    <Compile Include="BllPAR_COMMAND_SENDP.cs" />
+    <Compile Include="BllPAR_COMMAND_WORKTYPE.cs" />
+    <Compile Include="BllSYSTEM_LIST.cs" />
+    <Compile Include="BllSYSTEM_MODULE.cs" />
+    <Compile Include="BllSYSTEM_ROLE.cs" />
+    <Compile Include="BllSYSTEM_ROLE_AUTH.cs" />
+    <Compile Include="BllSYSTEM_USER.cs" />
+    <Compile Include="BllSYSTEM_USER_ROLE.cs" />
+    <Compile Include="BllTESTTASK_PARTYPE.cs" />
+    <Compile Include="BllTESTTASK_PARVALUE.cs" />
+    <Compile Include="BllTEST_ALLOCATION.cs" />
+    <Compile Include="BllTEST_INFO.cs" />
+    <Compile Include="BllTEST_INFODB.cs" />
+    <Compile Include="BllTEST_PAR_VALUE_KHD.cs" />
+    <Compile Include="BllTEST_PAR_VALUE_SWJ.cs" />
+    <Compile Include="BllTEST_PREPARE.cs" />
+    <Compile Include="BllTEST_PREPARE_ATTATCH.cs" />
+    <Compile Include="BllTEST_READT_VALUE.cs" />
+    <Compile Include="BllTEST_SAMPLE_FAILURE.cs" />
+    <Compile Include="BllTEST_SAMPLE_INFO.cs" />
+    <Compile Include="BllTEST_SENDP_VALUE.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{7B3C3C8A-29C1-4B57-9E66-1940D53D00AF}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{F3712814-CAE7-490F-A8A0-8850761189CF}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{BE6F087C-7381-47BA-9300-DE2E2F9B38EA}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

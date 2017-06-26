@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FD12A407-11CB-4BF8-A883-1CF900101BE0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RelayTest.Application</RootNamespace>
+    <AssemblyName>RelayTest.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>w30.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeRush.Common, Version=11.1.6.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeRush.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeRush.PlugInCore, Version=11.1.6.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeRush.StructuralParser, Version=11.1.6.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeRush.UserControls, Version=11.1.6.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DXCore.Controls.Data.v6.3, Version=11.1.6.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DXCore.Controls.Utils.v6.3, Version=11.1.6.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DXCore.Controls.XtraBars.v6.3, Version=11.1.6.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DXCore.Controls.XtraEditors.v6.3, Version=11.1.6.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DXCore.Controls.XtraGrid.v6.3, Version=11.1.6.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DXCore.Controls.XtraLayout.v6.3, Version=11.1.6.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DXCore.Localization, Version=11.1.6.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DXCore.Parser, Version=11.1.6.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DXCore.Platform, Version=11.1.6.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Localization.v11.1">
+      <HintPath>DLL\DevExpress.Localization.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.OfficeSkins.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Refactor.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=3f8e338797a7a380, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.SpellChecker.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Win.Projects.v11.1.Design, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.1.UI, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v11.1.Extensions, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SPDUtil\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VSLangProj, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppGlobal.cs" />
+    <Compile Include="ApplicationCommon.cs" />
+    <Compile Include="CommPar\FrmCommCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommPar\FrmCommCode.Designer.cs">
+      <DependentUpon>FrmCommCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommPar\FrmCommMetaSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommPar\FrmCommMetaSend.Designer.cs">
+      <DependentUpon>FrmCommMetaSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommPar\FrmCommStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommPar\FrmCommStart.Designer.cs">
+      <DependentUpon>FrmCommStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommPar\FrmCommStart_Maintain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommPar\FrmCommStart_Maintain.Designer.cs">
+      <DependentUpon>FrmCommStart_Maintain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommPar\FrmCommWorktype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommPar\FrmCommWorktype.Designer.cs">
+      <DependentUpon>FrmCommWorktype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigerFile.cs" />
+    <Compile Include="Controls\ucModuleMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucModuleMenu.Designer.cs">
+      <DependentUpon>ucModuleMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucModuleTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucModuleTree.Designer.cs">
+      <DependentUpon>ucModuleTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucRepositoryItemStore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucRepositoryItemStore.Designer.cs">
+      <DependentUpon>ucRepositoryItemStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertModelToAccess.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy.cs" />
+    <Compile Include="Query\FrmQueryDevStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query\FrmQueryDevStatus.Designer.cs">
+      <DependentUpon>FrmQueryDevStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\FrmQuerySampleFailure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query\FrmQuerySampleFailure.Designer.cs">
+      <DependentUpon>FrmQuerySampleFailure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\FrmQueryTaskInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query\FrmQueryTaskInfo.Designer.cs">
+      <DependentUpon>FrmQueryTaskInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\FrmQueryTestAttatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query\FrmQueryTestAttatch.Designer.cs">
+      <DependentUpon>FrmQueryTestAttatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevLoadOntherDevicesRelationEdit.Designer.cs">
+      <DependentUpon>FrmDevLoadOntherDevicesRelationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevPowerSwitchOntherDevicesRelationEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmDevPowerSwitchOntherDevicesRelationEdit.Designer.cs">
+      <DependentUpon>FrmDevPowerSwitchOntherDevicesRelationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevPowerSwitchRelationEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmDevPowerSwitchRelationEdit.Designer.cs">
+      <DependentUpon>FrmDevPowerSwitchRelationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevTestBoxInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmDevTestBoxInfo.Designer.cs">
+      <DependentUpon>FrmDevTestBoxInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevCoilPowerBaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmDevCoilPowerBaseInfo.Designer.cs">
+      <DependentUpon>FrmDevCoilPowerBaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevLoadPowerBaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmDevLoadPowerBaseInfo.Designer.cs">
+      <DependentUpon>FrmDevLoadPowerBaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevLoadOntherDevicesRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmDevLoadOntherDevicesRelation.Designer.cs">
+      <DependentUpon>FrmDevLoadOntherDevicesRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevPowerSwitchInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmDevPowerSwitchInfo.Designer.cs">
+      <DependentUpon>FrmDevPowerSwitchInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevWorkstatinInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmDevWorkstatinInfo.Designer.cs">
+      <DependentUpon>FrmDevWorkstatinInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmMaintainMonitorParameterType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmMaintainMonitorParameterType.designer.cs">
+      <DependentUpon>FrmMaintainMonitorParameterType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmComSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmComSetting.Designer.cs">
+      <DependentUpon>FrmComSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevUpgradeRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmDevUpgradeRecord.Designer.cs">
+      <DependentUpon>FrmDevUpgradeRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevSubordinateBaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmDevSubordinateBaseInfo.Designer.cs">
+      <DependentUpon>FrmDevSubordinateBaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevSensorBaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmDevSensorBaseInfo.Designer.cs">
+      <DependentUpon>FrmDevSensorBaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevLoadChannelInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmDevLoadChannelInfo.Designer.cs">
+      <DependentUpon>FrmDevLoadChannelInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevLoadBaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmDevLoadBaseInfo.Designer.cs">
+      <DependentUpon>FrmDevLoadBaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmMaintainMonitorParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmMaintainMonitorParameter.designer.cs">
+      <DependentUpon>FrmMaintainMonitorParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevPowerBaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmDevPowerBaseInfo.Designer.cs">
+      <DependentUpon>FrmDevPowerBaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevWorkstatinOntherDevicesRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmDevWorkstatinOntherDevicesRelation.Designer.cs">
+      <DependentUpon>FrmDevWorkstatinOntherDevicesRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevWorkstatinOntherDevicesRelationEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FrmDevWorkstatinOntherDevicesRelationEdit.Designer.cs">
+      <DependentUpon>FrmDevWorkstatinOntherDevicesRelationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FrmDevLoadOntherDevicesRelationEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sys\FrmLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sys\FrmLogs.Designer.cs">
+      <DependentUpon>FrmLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\FrmRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sys\FrmRole.Designer.cs">
+      <DependentUpon>FrmRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\FrmRoleAuth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sys\FrmRoleAuth.Designer.cs">
+      <DependentUpon>FrmRoleAuth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\FrmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sys\FrmChangePassword.Designer.cs">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\FrmModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sys\FrmModule.Designer.cs">
+      <DependentUpon>FrmModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sys\FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\FrmLimsTaskRead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\FrmLimsTaskRead.designer.cs">
+      <DependentUpon>FrmLimsTaskRead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\FrmSubmitPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\FrmSubmitPrompt.Designer.cs">
+      <DependentUpon>FrmSubmitPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\FrmTaskDisList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\FrmTaskDisList.Designer.cs">
+      <DependentUpon>FrmTaskDisList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\FrmTaskForSubSendp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\FrmTaskForSubSendp.Designer.cs">
+      <DependentUpon>FrmTaskForSubSendp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\FrmTaskManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\FrmTaskManager.Designer.cs">
+      <DependentUpon>FrmTaskManager.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CommPar\FrmCommCode.resx">
+      <DependentUpon>FrmCommCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommPar\FrmCommMetaSend.resx">
+      <DependentUpon>FrmCommMetaSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommPar\FrmCommStart.resx">
+      <DependentUpon>FrmCommStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommPar\FrmCommStart_Maintain.resx">
+      <DependentUpon>FrmCommStart_Maintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommPar\FrmCommWorktype.resx">
+      <DependentUpon>FrmCommWorktype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucModuleMenu.resx">
+      <DependentUpon>ucModuleMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucModuleTree.resx">
+      <DependentUpon>ucModuleTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucRepositoryItemStore.resx">
+      <DependentUpon>ucRepositoryItemStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Query\FrmQueryDevStatus.resx">
+      <DependentUpon>FrmQueryDevStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\FrmQuerySampleFailure.resx">
+      <DependentUpon>FrmQuerySampleFailure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\FrmQueryTaskInfo.resx">
+      <DependentUpon>FrmQueryTaskInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\FrmQueryTestAttatch.resx">
+      <DependentUpon>FrmQueryTestAttatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevLoadOntherDevicesRelationEdit.resx">
+      <DependentUpon>FrmDevLoadOntherDevicesRelationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevPowerSwitchOntherDevicesRelationEdit.resx">
+      <DependentUpon>FrmDevPowerSwitchOntherDevicesRelationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevPowerSwitchRelationEdit.resx">
+      <DependentUpon>FrmDevPowerSwitchRelationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevTestBoxInfo.resx">
+      <DependentUpon>FrmDevTestBoxInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevCoilPowerBaseInfo.resx">
+      <DependentUpon>FrmDevCoilPowerBaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevLoadPowerBaseInfo.resx">
+      <DependentUpon>FrmDevLoadPowerBaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevLoadChannelInfo.resx">
+      <DependentUpon>FrmDevLoadChannelInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevLoadOntherDevicesRelation.resx">
+      <DependentUpon>FrmDevLoadOntherDevicesRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevPowerSwitchInfo.resx">
+      <DependentUpon>FrmDevPowerSwitchInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevWorkstatinInfo.resx">
+      <DependentUpon>FrmDevWorkstatinInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmMaintainMonitorParameterType.resx">
+      <DependentUpon>FrmMaintainMonitorParameterType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmComSetting.resx">
+      <DependentUpon>FrmComSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevUpgradeRecord.resx">
+      <DependentUpon>FrmDevUpgradeRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevSubordinateBaseInfo.resx">
+      <DependentUpon>FrmDevSubordinateBaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevSensorBaseInfo.resx">
+      <DependentUpon>FrmDevSensorBaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevLoadBaseInfo.resx">
+      <DependentUpon>FrmDevLoadBaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmMaintainMonitorParameter.resx">
+      <DependentUpon>FrmMaintainMonitorParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevPowerBaseInfo.resx">
+      <DependentUpon>FrmDevPowerBaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevWorkstatinOntherDevicesRelation.resx">
+      <DependentUpon>FrmDevWorkstatinOntherDevicesRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FrmDevWorkstatinOntherDevicesRelationEdit.resx">
+      <DependentUpon>FrmDevWorkstatinOntherDevicesRelationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sys\FrmLogs.resx">
+      <DependentUpon>FrmLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sys\FrmRole.resx">
+      <DependentUpon>FrmRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sys\FrmRoleAuth.resx">
+      <DependentUpon>FrmRoleAuth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sys\FrmChangePassword.resx">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sys\FrmModule.resx">
+      <DependentUpon>FrmModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sys\FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\FrmLimsTaskRead.resx">
+      <DependentUpon>FrmLimsTaskRead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\FrmSubmitPrompt.resx">
+      <DependentUpon>FrmSubmitPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\FrmTaskDisList.resx">
+      <DependentUpon>FrmTaskDisList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\FrmTaskForSubSendp.resx">
+      <DependentUpon>FrmTaskForSubSendp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\FrmTaskManager.resx">
+      <DependentUpon>FrmTaskManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\Maticsoft.BLL.DEMOTABLE.datasource" />
+    <None Include="Properties\DataSources\Maticsoft.Model.DEMOTABLE.datasource" />
+    <None Include="Properties\DataSources\SPD.DRM.Model.MDLCLAIM_HEADER.datasource" />
+    <None Include="Properties\DataSources\SPD.DWM.Model.ConfirmSellPlanParams.datasource" />
+    <None Include="Properties\DataSources\SPD.DWM.Model.MDLDRUG_CATALOG.datasource" />
+    <None Include="Properties\DataSources\SPD.MST.Model.MDLAddressDrugRelation.datasource" />
+    <None Include="Properties\DataSources\SPD.MST.Model.MDLDrugCatalog.datasource" />
+    <None Include="Properties\DataSources\SPD.MST.Model.MDLDrugName.datasource" />
+    <None Include="Properties\DataSources\SPD.MST.Model.MDLDrugPackRelation.datasource" />
+    <None Include="Properties\DataSources\SPD.DWM.Model.MDLINSTORE_ADDRESS.datasource" />
+    <None Include="Properties\DataSources\SPD.DWM.Model.MDLOUT_BOX.datasource" />
+    <None Include="Properties\DataSources\SPD.DWM.Model.MDLPURCHASEIN_DETAIL.datasource" />
+    <None Include="Properties\DataSources\SPD.DWM.Model.MDLPURCHASEIN_HEADER.datasource" />
+    <None Include="Properties\DataSources\SPD.DWM.Model.MDLPURCHASEPLAN_DETAIL.datasource" />
+    <None Include="Properties\DataSources\SPD.DWM.Model.MDLPURCHASEPLAN_HEADER.datasource" />
+    <None Include="Properties\DataSources\SPD.DWM.Model.MDLSELL_DETAIL.datasource" />
+    <None Include="Properties\DataSources\SPD.DWM.Model.MDLSELL_HEADER.datasource" />
+    <None Include="Properties\DataSources\SPD.DWM.Model.ModelINSTORE_ADDRESS.datasource" />
+    <None Include="Properties\DataSources\SPD.DWM.Model.ModelPURCHASEIN_HEADER.datasource" />
+    <None Include="Properties\DataSources\SPD.DWM.Model.ModelPURCHASEPLAN_DETAIL.datasource" />
+    <None Include="Properties\DataSources\SPD.DWM.Model.ModelPURCHASEPLAN_HEADER.datasource" />
+    <None Include="Properties\DataSources\SPD.INV.Model.MDLINSTOCK.datasource" />
+    <None Include="Properties\DataSources\SPD.INV.Model.ModelINSTOCK.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLL\DevExpress.Localization.v11.1.dll" />
+    <Content Include="DLL\log4net.dll" />
+    <Content Include="w30.ico" />
+    <None Include="Resources\Chrysanthemum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{1F01FFB0-F15B-491C-83BD-C2D7246EBAD3}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{F3712814-CAE7-490F-A8A0-8850761189CF}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{BE6F087C-7381-47BA-9300-DE2E2F9B38EA}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F3712814-CAE7-490F-A8A0-8850761189CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RelayTest.Model</RootNamespace>
+    <AssemblyName>RelayTest.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ModelDEVRelationComm.cs" />
+    <Compile Include="ModelCommon.cs" />
+    <Compile Include="ModelCOM_SETTINGS.cs" />
+    <Compile Include="ModelDEV_COILPOWER_INFO.cs" />
+    <Compile Include="ModelDEV_COILPOWER_TO_LOAD.cs" />
+    <Compile Include="ModelDEV_LOADPOWER_INFO.cs" />
+    <Compile Include="ModelDEV_LOADPOW_TO_SWITCH.cs" />
+    <Compile Include="ModelDEV_LOAD_CHANNEL_INFO.cs" />
+    <Compile Include="ModelDEV_LOAD_INFO.cs" />
+    <Compile Include="ModelDEV_LOAD_TO_SUB.cs" />
+    <Compile Include="ModelDEV_POWER_INFO.cs" />
+    <Compile Include="ModelDEV_POWER_SWITCH.cs" />
+    <Compile Include="ModelDEV_POWER_TO_LOAD.cs" />
+    <Compile Include="ModelDEV_SENSOR_INFO.cs" />
+    <Compile Include="ModelDEV_SWITCH_INOUT.cs" />
+    <Compile Include="ModelDEV_SWITCH_TO_LOAD.cs" />
+    <Compile Include="ModelDEV_TESTBOX_INFO.cs" />
+    <Compile Include="ModelDEV_UPGRADERECORD.cs" />
+    <Compile Include="ModelDEV_SUBORDINATE_INFO.cs" />
+    <Compile Include="ModelDEV_WORKSTATION_INFO.cs" />
+    <Compile Include="ModelDEV_WORK_TO_COILPOWER.cs" />
+    <Compile Include="ModelDEV_WORK_TO_POWER.cs" />
+    <Compile Include="ModelDEV_WORK_TO_SENSOR.cs" />
+    <Compile Include="ModelDEV_WORK_TO_SUB.cs" />
+    <Compile Include="ModelFLOW_COIL_STATUS.cs" />
+    <Compile Include="ModelFLOW_DEVICE_STATUS.cs" />
+    <Compile Include="ModelFLOW_LOAD_CANNEL.cs" />
+    <Compile Include="ModelFLOW_POWER_SWITCH.cs" />
+    <Compile Include="ModelFLOW_SENSOR_DATA.cs" />
+    <Compile Include="ModelLIMS_DOWNLOAD_PARA.cs" />
+    <Compile Include="ModelLIMS_DOWNLOAD_SAM.cs" />
+    <Compile Include="ModelOPERATIONLOG.cs" />
+    <Compile Include="ModelPAR_COMMAND_INFO.cs" />
+    <Compile Include="ModelPAR_COMMAND_READT.cs" />
+    <Compile Include="ModelPAR_COMMAND_RECEIVE.cs" />
+    <Compile Include="ModelPAR_COMMAND_SEND.cs" />
+    <Compile Include="ModelPAR_COMMAND_SENDP.cs" />
+    <Compile Include="ModelPAR_COMMAND_WORKTYPE.cs" />
+    <Compile Include="ModelSYSTEM_LIST.cs" />
+    <Compile Include="ModelSYSTEM_MODULE.cs" />
+    <Compile Include="ModelSYSTEM_ROLE.cs" />
+    <Compile Include="ModelSYSTEM_ROLE_AUTH.cs" />
+    <Compile Include="ModelSYSTEM_USER.cs" />
+    <Compile Include="ModelSYSTEM_USER_ROLE.cs" />
+    <Compile Include="ModelTESTTASK_PARTYPE.cs" />
+    <Compile Include="ModelTESTTASK_PARVALUE.cs" />
+    <Compile Include="ModelTEST_ALLOCATION.cs" />
+    <Compile Include="ModelTEST_INFO.cs" />
+    <Compile Include="ModelTEST_INFODB.cs" />
+    <Compile Include="ModelTEST_PAR_VALUE_KHD.cs" />
+    <Compile Include="ModelTEST_PAR_VALUE_SWJ.cs" />
+    <Compile Include="ModelTEST_PREPARE.cs" />
+    <Compile Include="ModelTEST_PREPARE_ATTATCH.cs" />
+    <Compile Include="ModelTEST_READT_VALUE.cs" />
+    <Compile Include="ModelTEST_SAMPLE_FAILURE.cs" />
+    <Compile Include="ModelTEST_SAMPLE_INFO.cs" />
+    <Compile Include="ModelTEST_SENDP_VALUE.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
