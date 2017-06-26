@@ -776,7 +776,7 @@ namespace RelayTest.Application
             //更新失效查询命令
             Text += "Ver 1.1 build 20170609";
 
-            barStaticItem2.Caption = "1.1 build 20170609";
+            barStaticItem2.Caption = "1.1 build 20170626";
 
            
         }
