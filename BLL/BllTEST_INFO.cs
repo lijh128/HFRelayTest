@@ -303,6 +303,30 @@ namespace RelayTest.BLL {
             }
 
         }
+        /// <summary>
+        /// 获得数据列表
+        /// </summary>
+        public DataSet GetList_complete(string strWhere)
+        {
+            try
+            {
+                Log.Info("BllTEST_INFO->GetList_complete---START");
+                ConnectionOpen();
+                dal.SetDBAccess(GetDBAccess());
+                return dal.GetList_complete(strWhere);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("BllTEST_INFO->GetList_complete---FAILED", ex);
+                throw ex;
+            }
+            finally
+            {
+                ConnectionClose();
+                Log.Info("BllTEST_INFO->GetList_complete---finally");
+            }
+
+        }
 		/// <summary>
 		/// 获得前几行数据
 		/// </summary>
@@ -538,6 +562,29 @@ namespace RelayTest.BLL {
             }
 
         }
+
+        /// <summary>
+        /// 获得已结束（完成）的试验任务数据列表
+        /// </summary>
+        public DataSet GetListComplete()
+        {
+            try
+            {
+                Log.Info("BllTEST_INFO->GetListComplete---START");
+                //读取试验状态F_TEST_STATUS=60：已结束；的试验任务信息
+                return GetList_complete(" f_test_status=60 ");
+            }
+            catch (Exception ex)
+            {
+                Log.Error("BllTEST_INFO->GetListComplete---FAILED", ex);
+                throw ex;
+            }
+            finally
+            {
+                Log.Info("BllTEST_INFO->GetListComplete---finally");
+            }
+
+        }
         /// <summary>
         /// 获得t_test_info_nodisplay表的试验编号
         /// </summary>
@@ -729,6 +776,31 @@ namespace RelayTest.BLL {
             {
                 ConnectionClose();
                 Log.Info("BllTEST_INFO->Add---finally");
+            }
+
+        }
+
+        /// <summary>
+        /// 更新任务状态为20（试验中，未完成），原任务状态为60（已完成）
+        /// </summary>
+        public bool update_status(string F_TEST_TASK_ID)
+        {
+            try
+            {
+                Log.Info("BllTEST_INFO->update_status---START");
+                ConnectionOpen();
+                dal.SetDBAccess(GetDBAccess());
+                return dal.update_status(F_TEST_TASK_ID);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("BllTEST_INFO->update_status---FAILED", ex);
+                throw ex;
+            }
+            finally
+            {
+                ConnectionClose();
+                Log.Info("BllTEST_INFO->update_status---finally");
             }
 
         }

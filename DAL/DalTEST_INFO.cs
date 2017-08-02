@@ -21,7 +21,7 @@ namespace RelayTest.DAL
    		 /// <summary>
 		///   是否存在该记录
 		/// </summary>
-		public new bool Exists(string F_TEST_TASK_ID)
+		public bool Exists(string F_TEST_TASK_ID)
 		{
 		 try
             {
@@ -1006,6 +1006,33 @@ OracleParameter[] parameters = {
             }
 
         }
+        /// <summary>
+        /// 获得已完成数据列表
+        /// </summary>
+        public DataSet GetList_complete(string strWhere)
+        {
+
+
+            try
+            {
+                Log.Info("DalTEST_INFO->GetList_complete---START");
+                StringBuilder strSql = new StringBuilder();
+                strSql.Append("select * ");
+                strSql.Append(" FROM t_test_info  where 1=1");
+                if (strWhere.Trim() != "")
+                {
+                    strSql.Append(" and " + strWhere);
+                }
+                strSql.Append(" order by f_test_task_id desc ");
+                return Query(strSql.ToString());
+            }
+            catch (Exception ex)
+            {
+                Log.Error("DalTEST_INFO->GetList_complete---FAILED", ex);
+                throw ex;
+            }
+
+        }
 
         /// <summary>
         /// 获得t_test_info_nodisplay数据列表中的试验任务编号
@@ -1257,6 +1284,41 @@ OracleParameter[] parameters = {
                 Log.Error("DalTEST_INFO->Add_noDisplay---FAILED", ex);
                 throw ex;
             }
+        }
+
+        /// <summary>
+        /// 更新任务状态为20（试验中，未完成），原任务状态为60（已完成）
+        /// </summary>
+        public bool update_status(string F_TEST_TASK_ID)
+        {
+
+            try
+            {
+                Log.Info("DalTEST_INFO->update_status---START");
+                StringBuilder strSql = new StringBuilder();
+                strSql.Append("update  T_TEST_INFO  set F_TEST_STATUS =20, F_OPERATIONTIME = SYSDATE");
+                strSql.Append(" where F_TEST_TASK_ID=:F_TEST_TASK_ID ");
+                OracleParameter[] parameters = {
+					new OracleParameter(":F_TEST_TASK_ID", OracleType.VarChar,20)			};
+                parameters[0].Value = F_TEST_TASK_ID;
+
+
+                int rows = ExecuteSql(strSql.ToString(), parameters);
+                if (rows > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("DalTEST_INFO->update_status---FAILED", ex);
+                throw ex;
+            }
+
         }
 
         #endregion

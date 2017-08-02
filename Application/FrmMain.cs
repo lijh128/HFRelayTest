@@ -774,9 +774,9 @@ namespace RelayTest.Application
 
 
             //更新失效查询命令
-            Text += "Ver 1.1 build 20170609";
+            Text += "Ver 1.1 build 20170801";
 
-            barStaticItem2.Caption = "1.1 build 20170626";
+            barStaticItem2.Caption = "1.1 build 20170801";
 
            
         }
@@ -961,6 +961,20 @@ namespace RelayTest.Application
                 return;
             }
             FrmTaskDisList frm = new FrmTaskDisList();
+            frm.MdiParent = this;
+            BindClickEventToAllBuutonControl(frm);
+            SetStyleController(frm, styleController);
+            frm.Show();
+        }
+
+        private void mmRunUpTestStatus_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            MenuClickLog(e);
+            if (IsExistWindow("FrmRunUpTestStatus"))
+            {
+                return;
+            }
+            FrmRunUpTestStatus frm = new FrmRunUpTestStatus();
             frm.MdiParent = this;
             BindClickEventToAllBuutonControl(frm);
             SetStyleController(frm, styleController);

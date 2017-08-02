@@ -1028,6 +1028,40 @@ OracleParameter[] parameters = {
             }
 
         }
+
+        /// <summary>
+        /// 更新任务状态为20（试验中，未完成），原任务状态为60（已完成）
+        /// </summary>
+        public bool update_status(string F_TEST_TASK_ID)
+        {
+            try
+            {
+                Log.Info("DalTEST_ALLOCATION->update_status---START");
+                StringBuilder strSql = new StringBuilder();
+                strSql.Append("update  T_TEST_ALLOCATION  set F_SAMPLE_STATUS =20, F_OPERATIONTIME = SYSDATE");
+                strSql.Append(" where F_TEST_TASK_ID=:F_TEST_TASK_ID ");
+                OracleParameter[] parameters = {
+					new OracleParameter(":F_TEST_TASK_ID", OracleType.VarChar,20)			};
+                parameters[0].Value = F_TEST_TASK_ID;
+
+
+                int rows = ExecuteSql(strSql.ToString(), parameters);
+                if (rows > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("DalTEST_ALLOCATION->update_status---FAILED", ex);
+                throw ex;
+            }
+
+        }
         #endregion
 
 

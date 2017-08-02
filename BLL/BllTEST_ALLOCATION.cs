@@ -496,6 +496,32 @@ namespace RelayTest.BLL {
                 Log.Info("BllTEST_ALLOCATION->GetAndDisplaySampleInfo---finally");
             }
         }
+
+        /// <summary>
+        /// 更新任务状态为20（试验中，未完成），原任务状态为60（已完成）
+        /// </summary>
+        public bool update_status(string F_TEST_TASK_ID)
+        {
+            try
+            {
+                Log.Info("BllTEST_ALLOCATION->update_status---START");
+                ConnectionOpen();
+                dal.SetDBAccess(GetDBAccess());
+                return dal.update_status(F_TEST_TASK_ID);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("BllTEST_ALLOCATION->update_status---FAILED", ex);
+                throw ex;
+            }
+            finally
+            {
+                ConnectionClose();
+                Log.Info("BllTEST_ALLOCATION->update_status---finally");
+            }
+
+        }
+
         #endregion
 
     }

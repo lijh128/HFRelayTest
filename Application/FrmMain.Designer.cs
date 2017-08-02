@@ -116,6 +116,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.mmRunUpTestStatus = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.styleController)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -569,9 +570,10 @@
             this.mmLogin,
             this.mmLogout,
             this.mmLimsTaskRead,
-            this.mmTaskDisList});
+            this.mmTaskDisList,
+            this.mmRunUpTestStatus});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 12;
+            this.ribbonControl1.MaxItemId = 13;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -642,6 +644,7 @@
             // ribbonPageGroup12
             // 
             this.ribbonPageGroup12.ItemLinks.Add(this.mmTaskDisList);
+            this.ribbonPageGroup12.ItemLinks.Add(this.mmRunUpTestStatus);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             // 
             // ribbonPage2
@@ -767,7 +770,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_loginName.Appearance.BackColor = System.Drawing.Color.White;
             this.lbl_loginName.Appearance.BackColor2 = System.Drawing.SystemColors.ActiveBorder;
-            this.lbl_loginName.Appearance.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_loginName.Appearance.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lbl_loginName.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.lbl_loginName.LineColor = System.Drawing.Color.Transparent;
             this.lbl_loginName.Location = new System.Drawing.Point(897, 96);
@@ -846,6 +849,13 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1077, 0);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 427);
+            // 
+            // mmRunUpTestStatus
+            // 
+            this.mmRunUpTestStatus.Caption = "爬高片试验状态转换";
+            this.mmRunUpTestStatus.Id = 12;
+            this.mmRunUpTestStatus.Name = "mmRunUpTestStatus";
+            this.mmRunUpTestStatus.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mmRunUpTestStatus_ItemClick);
             // 
             // FrmMain
             // 
@@ -964,5 +974,6 @@
         private DevExpress.XtraBars.BarButtonItem mmLimsTaskRead;
         private DevExpress.XtraBars.BarButtonItem mmTaskDisList;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
+        private DevExpress.XtraBars.BarButtonItem mmRunUpTestStatus;
     }
 }
